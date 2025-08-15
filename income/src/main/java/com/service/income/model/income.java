@@ -25,6 +25,6 @@ public class income {
 
     private String description; // optional notes
 
-    private String userId; // link to the user who owns this income
+    private String userEmail; // link to the user who owns this income
 }
 
