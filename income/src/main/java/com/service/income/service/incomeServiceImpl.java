@@ -6,6 +6,8 @@ import com.service.income.repository.incomeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class incomeServiceImpl implements incomeService{
 
@@ -23,5 +25,10 @@ public class incomeServiceImpl implements incomeService{
         in.setUserEmail(email);
         incomerepository.save(in);
         return in;
+    }
+
+    @Override
+    public List<income> getAllIncome(String name) {
+        return incomerepository.findByUserEmail(name);
     }
 }
